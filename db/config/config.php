@@ -4,10 +4,10 @@ $appSettings = include __DIR__.'/../src/config/settings.php';
 
 return [
     'paths'        => [
-        'migrations' => '%%PHINX_CONFIG_DIR%%/migrations',
-        'seeds'      => '%%PHINX_CONFIG_DIR%%/seeds',
+        'migrations' => '%%PHINX_CONFIG_DIR%%/../migrations',
+        'seeds'      => '%%PHINX_CONFIG_DIR%%/../seeds',
     ],
-    'migration_base_class' => '\Migrator\Migration',
+    'migration_base_class' => '\Migrator\Migrator',
     'environments' => [
         'default_migration_table' => 'phinxlog',
         'default_database'        => 'db',

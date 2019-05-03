@@ -1,0 +1,28 @@
+<?php
+$namespaceDefinition
+use $useClassName;
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+
+class $className extends $baseClassName
+{
+
+    /**
+    * Run the migrations.
+    *
+    * @return void
+    */
+    public function up() {
+
+    }
+
+     /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down() {
+
+    }
+}

@@ -1,13 +1,13 @@
 <?php
 
-require __DIR__.'/../../vendor/autoload.php';
-
 namespace Migrator;
+
+require __DIR__.'/../../vendor/autoload.php';
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Phinx\Migration\AbstractMigration;
 
-class Migration extends AbstractMigration {
+class Migrator extends AbstractMigration {
     /** @var \Illuminate\Database\Capsule\Manager $capsule */
     public $capsule;
     /** @var \Illuminate\Database\Schema\Builder $capsule */

@@ -5,7 +5,6 @@ namespace Commands\Migration;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class CreateCommand extends Command
@@ -32,7 +31,7 @@ class CreateCommand extends Command
     {
         $name = $input->getArgument($this->commandArgumentName);
 
-        $commandResult = shell_exec("php vendor/bin/phinx create $name -c db/config.php");
+        $commandResult = shell_exec("php vendor/bin/phinx create $name -c db/config/config.php -t db/config/template.phinx");
 
         $output->writeln($commandResult);
     }
