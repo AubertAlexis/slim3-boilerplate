@@ -1,6 +1,6 @@
 <?php
 
-$appSettings = include __DIR__.'/../src/config/settings.php';
+$appSettings = include __DIR__.'/../../src/config/settings.php';
 
 return [
     'paths'        => [
@@ -12,13 +12,13 @@ return [
         'default_migration_table' => 'phinxlog',
         'default_database'        => 'db',
         'db'             => [
-            'adapter' => $appSettings['db']['driver'],
-            'host'    => $appSettings['db']['host'],
-            'name'    => $appSettings['db']['database'],
-            'user'    => $appSettings['db']['username'],
-            'pass'    => $appSettings['db']['password'],
-            'port'    => $appSettings['db']['port'],
-            'charset' => $appSettings['db']['charset'],
+            'adapter' => $appSettings['settings']['db']['driver'],
+            'host'    => $appSettings['settings']['db']['host'],
+            'name'    => $appSettings['settings']['db']['database'],
+            'user'    => $appSettings['settings']['db']['username'],
+            'pass'    => $appSettings['settings']['db']['password'],
+            'port'    => $appSettings['settings']['db']['port'],
+            'charset' => $appSettings['settings']['db']['charset'],
         ],
     ],
 ];

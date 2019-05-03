@@ -1,8 +1,7 @@
 <?php
 
-use \Migrator\Migrator;
+use Migrator\Migrator;
 
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 
 class UsersAndRoles extends Migrator
@@ -14,7 +13,7 @@ class UsersAndRoles extends Migrator
     * @return void
     */
     public function up() {
-        Schema::create('users', function (Blueprint $table) {
+        $this->schema->create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('firstname');
             $table->string('lastname');
@@ -24,7 +23,7 @@ class UsersAndRoles extends Migrator
             $table->timestamps();
         });
 
-        Schema::create('roles', function (Blueprint $table) {
+        $this->schema->create('roles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('description');
@@ -38,7 +37,7 @@ class UsersAndRoles extends Migrator
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('users');
-        Schema::dropIfExists('roles');
+        $this->schema->dropIfExists('users');
+        $this->schema->dropIfExists('roles');
     }
 }
