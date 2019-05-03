@@ -4,17 +4,28 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use Commands\Migration\CreateCommand;
-use Commands\Migration\RunCommand;
+
+use Commands\Migration\CreateMigrationCommand;
+use Commands\Migration\RunMigrationCommand;
+
 use Commands\Asset\CompileCommand;
 
 $application = new Application();
 
-# add our commands
-$application->add(new CreateCommand());
-$application->add(new RunCommand());
+/*
+ * Migration commands
+ */
+$application->add(new CreateMigrationCommand());
+$application->add(new RunMigrationCommand());
+
+/*
+ * Seed commands
+ */
 
 
+/*
+ * Assets management commands
+ */
 $application->add(new CompileCommand());
 
 $application->run();

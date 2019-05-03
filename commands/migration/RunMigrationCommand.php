@@ -8,7 +8,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class RunCommand extends Command
+class RunMigrationCommand extends Command
 {
     protected $commandName = 'migration:run';
     protected $commandDescription = "Run up or down migration files";
