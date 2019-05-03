@@ -6,6 +6,7 @@ It is composed of many great packages such as:
 
   - Bootstrap 3 (should be updated to version 4 soon)
   - Eloquent
+  - Phinx
   - Monolog
   - JQuery
   - leafo/scssphp
