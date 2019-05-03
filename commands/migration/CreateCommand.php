@@ -13,7 +13,7 @@ class CreateCommand extends Command
     protected $commandDescription = "Create database migration file";
 
     protected $commandArgumentName = "migration_name";
-    protected $commandArgumentDescription = "Name of your migration file";
+    protected $commandArgumentNameDescription = "Name of your migration file";
 
     protected function configure()
     {
@@ -22,8 +22,8 @@ class CreateCommand extends Command
             ->setDescription($this->commandDescription)
             ->addArgument(
                 $this->commandArgumentName,
-                InputArgument::OPTIONAL,
-                $this->commandArgumentDescription
+                InputArgument::REQUIRED,
+                $this->commandArgumentNameDescription
             );
     }
 

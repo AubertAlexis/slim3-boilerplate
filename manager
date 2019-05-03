@@ -5,12 +5,16 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 use Commands\Migration\CreateCommand;
+use Commands\Migration\RunCommand;
 use Commands\Asset\CompileCommand;
 
 $application = new Application();
 
 # add our commands
 $application->add(new CreateCommand());
+$application->add(new RunCommand());
+
+
 $application->add(new CompileCommand());
 
 $application->run();
