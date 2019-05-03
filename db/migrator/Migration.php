@@ -17,7 +17,7 @@ class Migration extends AbstractMigration {
 
     public function init()  {
         /* Load App Settings */
-        $this->appSettings = include __DIR__.'/../../src/settings.php';
+        $this->appSettings = include __DIR__.'/../../src/config/settings.php';
 
         /* Start Eloquent */
         $this->capsule = new Capsule();

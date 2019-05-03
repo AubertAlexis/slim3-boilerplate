@@ -1,6 +1,6 @@
 <?php
 
-$appSettings = include __DIR__.'/../src/settings.php';
+$appSettings = include __DIR__.'/../src/config/settings.php';
 
 return [
     'paths'        => [
