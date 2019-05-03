@@ -33,15 +33,15 @@
         "psr-4": {
             "Controllers\\": "src/controllers/",
             "Models\\": "src/models/",
-            "Migration\\": "db/migrator"
+            "Migration\\": "db/migrator",
+            "Commands\\": "commands/"
         }
     },
     "config": {
         "process-timeout" : 0
     },
     "scripts": {
-        "start": "php -S localhost:8080 -t public",
-        "compile-assets": "php ./assets/compile.php"
+        "start": "php -S localhost:8080 -t public"
     }
 
 }
