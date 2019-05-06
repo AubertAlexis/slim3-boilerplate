@@ -33,7 +33,6 @@
         "psr-4": {
             "Controllers\\": "src/controllers/",
             "Models\\": "src/models/",
-            "Migrator\\": "db/migrator",
             "Commands\\": "commands/"
         }
     },

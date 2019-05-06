@@ -31,7 +31,7 @@ class CreateMigrationCommand extends Command
     {
         $name = $input->getArgument($this->commandArgumentName);
 
-        $commandResult = shell_exec("php vendor/bin/phinx create $name -c db/config/config.php -t db/config/template.phinx");
+        $commandResult = shell_exec("php vendor/bin/phinx create $name -c db/config/config.php");
 
         $output->writeln($commandResult);
     }
