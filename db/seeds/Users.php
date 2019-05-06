@@ -15,6 +15,22 @@ class Users extends AbstractSeed
      */
     public function run()
     {
+        $appSettings = include __DIR__.'/../../src/config/settings.php';
 
+        $data = [
+            [
+                'firstname'    => 'John',
+                'lastname' => 'Doe',
+                'email' => 'john@doe.local',
+                'password' => sha1($appSettings['settings']['secret'].'123456789'),
+                'role_id' => 1,
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ]
+        ];
+
+        $users = $this->table('users');
+        $users->insert($data)
+            ->save();
     }
 }

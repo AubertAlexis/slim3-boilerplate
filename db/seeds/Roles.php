@@ -15,6 +15,22 @@ class Roles extends AbstractSeed
      */
     public function run()
     {
+        $data = [
+            [
+                'name'    => 'admin',
+                'description' => 'Users with admin rights',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ],[
+                'name'    => 'user',
+                'description' => 'Simple user',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ]
+        ];
 
+        $roles = $this->table('roles');
+        $roles->insert($data)
+            ->save();
     }
 }
