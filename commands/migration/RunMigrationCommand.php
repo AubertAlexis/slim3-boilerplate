@@ -57,7 +57,7 @@ class RunMigrationCommand extends Command
         }
 
         if ($direction == 'up') {
-            $migrateUpCmd = "php vendor/bin/phinx migrate -c db/config/config.php -e db";
+            $migrateUpCmd = "vendor" . DIRECTORY_SEPARATOR . "bin" . DIRECTORY_SEPARATOR . "phinx migrate -c db/config/config.php -e db";
 
             if ($target) {
                 $migrateUpCmd .= " -t ".$target;
@@ -69,7 +69,7 @@ class RunMigrationCommand extends Command
 
             $commandResult = shell_exec($migrateUpCmd);
         } else {
-            $migrateDownCmd = "php vendor/bin/phinx rollback -c db/config/config.php -e db";
+            $migrateDownCmd = "vendor" . DIRECTORY_SEPARATOR . "bin" . DIRECTORY_SEPARATOR . "phinx rollback -c db/config/config.php -e db";
 
             if ($target) {
                 $migrateDownCmd .= " -t ".$target;
