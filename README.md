@@ -20,6 +20,11 @@ It is composed of many great packages such as:
 
 ## Guide
 
+### Install dependencies
+
+`composer install` :
+Will download the `dependencies` needed for the project
+
 ### Assets management
 
 `php manager assets:compile` : 
