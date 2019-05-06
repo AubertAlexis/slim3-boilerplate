@@ -13,6 +13,8 @@ use Commands\Seed\RunSeedCommand;
 
 use Commands\Asset\CompileCommand;
 
+use Commands\Secret\GenerateSecretCommand;
+
 $application = new Application();
 
 /*
@@ -31,5 +33,10 @@ $application->add(new RunSeedCommand());
  * Assets management commands
  */
 $application->add(new CompileCommand());
+
+/*
+ * Secret generator
+ */
+$application->add(new GenerateSecretCommand());
 
 $application->run();
