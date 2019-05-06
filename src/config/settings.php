@@ -9,20 +9,20 @@ return [
 
         // App specific settings
         'mode' => 'dev', // Or 'prod'
-        'secret' => 'CHANGE_THIS_SECRET',
-        'lang_path' =>  __DIR__ . '/../lang',
-        'uploadedFileDir' => __DIR__ . '/../uploads',
+        'secret' => '@CHANGE_THIS_SECRET@',
+        'lang_path' =>  __DIR__ . '/../../lang',
+        'uploadedFileDir' => __DIR__ . '/../../uploads',
 
         // Twig settings
         'twig' => [
-            'tpl_path' => __DIR__ . '/../templates',
-            'cache_path' => __DIR__ . '/../cache',
+            'tpl_path' => __DIR__ . '/../../templates',
+            'cache_path' => __DIR__ . '/../../cache',
         ],
 
         // Monolog settings
        'logger' => [
            'name' => 'slim-app',
-           'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
+           'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../../logs/app.log',
            'level' => \Monolog\Logger::DEBUG,
        ],
 
@@ -30,6 +30,7 @@ return [
         'db' => [
             'driver' => 'mysql',
             'host' => 'localhost',
+            'port' => 3306,
             'database' => '',
             'username' => 'root',
             'password' => '',

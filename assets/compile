@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 
 require _DIR_.'/../vendor/autoload.php';
