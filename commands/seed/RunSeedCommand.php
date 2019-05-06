@@ -35,7 +35,7 @@ class RunSeedCommand extends Command
     {
         $seedName = $input->getOption($this->commandOptionSeedName);
 
-        $runSeedCmd = "php vendor/bin/phinx seed:run -c db/config/config.php -e db";
+        $runSeedCmd = "vendor" . DIRECTORY_SEPARATOR . "bin" . DIRECTORY_SEPARATOR . "phinx seed:run -c db/config/config.php -e db";
 
         if ($seedName) {
             $runSeedCmd .= " -s $seedName";
